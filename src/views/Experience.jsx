@@ -10,7 +10,7 @@ const Experience = () => {
       transition={{ duration: 1.2 }}
       className="relative min-h-screen max-w-full mx-auto px-5 sm:px-10 flex flex-col items-center justify-center"
     >
-      <h3 className="uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 text-xl sm:text-2xl mb-10 md:mb-4">
+      <h3 className="uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 text-xl sm:text-2xl md:mb-10">
         Experience
       </h3>
 

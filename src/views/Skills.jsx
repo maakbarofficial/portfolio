@@ -41,11 +41,11 @@ const Skills = () => {
         Skills
       </h3>
 
-      <h3 className="uppercase tracking-[2px] sm:tracking-[3px] text-gray-500 text-xs sm:text-sm mt-2">
+      <h3 className="uppercase tracking-[2px] sm:tracking-[3px] text-gray-500 text-xs sm:text-sm">
         These are the Techs I've worked with
       </h3>
 
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-5 mx-auto mt-10">
+      <div className="grid grid-cols-4 md:grid-cols-6 gap-4 sm:gap-5 mx-auto mt-10">
         {skillsData.map((skill, index) => (
           <Skill
             key={skill.id}
