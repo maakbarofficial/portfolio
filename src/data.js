@@ -161,3 +161,96 @@ export const skillsData = [
   { id: 17, name: "PostgreSQL", img: psqlImg, lightBg: true },
   { id: 18, name: "MongoDB", img: mongodbImg },
 ];
+
+export const projectsData = [
+  {
+    id: 1,
+    title: "Central Reservation Control System - AirSial",
+    image:
+      "https://www.hotelminder.com/images/otainsight-revenue-management-dashboard.png",
+    description:
+      "Build CRC System for Revenue Management Department of AirSial",
+    techs: [
+      htmlImg,
+      cssImg,
+      jsImg,
+      tsImg,
+      reactImg,
+      nodejsImg,
+      phpImg,
+      laravelImg,
+      mysqlImg,
+    ],
+    link: "https://demo.airsial.com.pk/crcr/",
+  },
+  {
+    id: 2,
+    title: "Trading Terminal Web - X9 Trader",
+    image: "https://x9trader.com/assets/home/hero/light.webp",
+    description: "",
+    techs: [
+      htmlImg,
+      cssImg,
+      jsImg,
+      tsImg,
+      reactImg,
+      angularImg,
+      nodejsImg,
+      pythonImg,
+      psqlImg,
+      mongodbImg,
+    ],
+    link: "https://x9trader.com/",
+  },
+  {
+    id: 3,
+    title: "Electronic Medical Record (EMR) - SINA",
+    image:
+      "https://codeastro.com/wp-content/uploads/2022/04/CodeAstro-Thumbnail_Hospital-Management-System-PHP-CodeIgniter.jpg",
+    description:
+      "An enterprise-level hospital management system built with scalable architecture for SINA.",
+    techs: [htmlImg, cssImg, jsImg, tsImg, reactImg, nodejsImg, psqlImg],
+  },
+  {
+    id: 4,
+    title: "Fundraising, Donation & B2B Marketplace Software",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWBzYLpTuVDHpIjoMDTpWbgcFsoSEBsW7KLg&s",
+    description:
+      "An enterprise-level Fundraising, Donation & B2B Marketplace Software for Extensia for Masajid's in USA.",
+    techs: [
+      htmlImg,
+      cssImg,
+      jsImg,
+      tsImg,
+      reactImg,
+      nextjsImg,
+      nodejsImg,
+      psqlImg,
+      mongodbImg,
+    ],
+  },
+  {
+    id: 5,
+    title: "Dropbox Clone",
+    image: nextjsImg,
+    description: "",
+    techs: [
+      htmlImg,
+      cssImg,
+      jsImg,
+      tsImg,
+      reactImg,
+      nextjsImg,
+      nodejsImg,
+      mongodbImg,
+    ],
+  },
+  {
+    id: 6,
+    title: "Ecommerce Backend",
+    image: nodejsImg,
+    description: "",
+    techs: [jsImg, tsImg, nodejsImg, mongodbImg],
+  },
+];
