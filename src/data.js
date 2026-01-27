@@ -85,7 +85,7 @@ export const experienceData = [
       mysqlImg,
       mongodbImg,
       goImg,
-      rustImg
+      rustImg,
     ],
     points: [
       "Build different X9 Products, X9 Trader Web Terminal, X9 Trader Mobile App and X9 Trader CMS.",
@@ -108,7 +108,7 @@ export const experienceData = [
       reactImg,
       nodejsImg,
       mongodbImg,
-      
+
       phpImg,
     ],
     points: [
@@ -133,10 +133,31 @@ export const experienceData = [
       nodejsImg,
       mongodbImg,
       phpImg,
-      wpImg
+      wpImg,
     ],
     points: [
       "Developed Responsive Web Apps using React, Node.js, Express.js and MongoDB.",
     ],
   },
+];
+
+export const skillsData = [
+  { id: 1, name: "HTML", img: htmlImg, lightBg: true },
+  { id: 2, name: "CSS", img: cssImg, lightBg: true },
+  { id: 3, name: "JavaScript", img: jsImg },
+  { id: 4, name: "TypeScript", img: tsImg },
+  { id: 5, name: "React", img: reactImg },
+  { id: 6, name: "Vue", img: vueImg },
+  { id: 7, name: "Angular", img: angularImg, lightBg: true },
+  { id: 8, name: "Next.js", img: nextjsImg, lightBg: true },
+  { id: 9, name: "Node.js", img: nodejsImg },
+  { id: 10, name: "WordPress", img: wpImg },
+  { id: 11, name: "PHP", img: phpImg },
+  { id: 12, name: "Laravel", img: laravelImg },
+  { id: 13, name: "Python", img: pythonImg },
+  { id: 14, name: "Go", img: goImg },
+  { id: 15, name: "Rust", img: rustImg, lightBg: true },
+  { id: 16, name: "MySQL", img: mysqlImg },
+  { id: 17, name: "PostgreSQL", img: psqlImg, lightBg: true },
+  { id: 18, name: "MongoDB", img: mongodbImg },
 ];
