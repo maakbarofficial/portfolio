@@ -11,14 +11,14 @@ const ExperienceCard = ({
   points,
 }) => {
   return (
-    <article className="flex flex-col shrink-0 snap-center rounded-xl bg-[#292929] p-6 sm:p-8 md:p-10 w-70 sm:w-85 md:w-100 lg:w-105 hover:opacity-100 opacity-100 md:opacity-40 transition-opacity duration-200 cursor-pointer">
+    <article className="flex flex-col shrink-0 snap-center rounded-xl bg-[#292929] p-6 sm:p-8 md:p-10 w-70 sm:w-85 md:w-100 lg:w-200 hover:opacity-100 opacity-100 md:opacity-40 transition-opacity duration-200 cursor-pointer">
       <motion.img
         initial={{ y: -60, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
         src={companyImg}
-        className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain rounded-full mx-auto"
+        className="w-20 h-20 sm:w-24 sm:h-24 md:w-30 md:h-30 object-contain rounded-full mx-auto"
         alt="WorkExperience"
       />
       <div className="px-0 md:px-4 mt-4">
