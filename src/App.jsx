@@ -29,15 +29,22 @@ function App() {
         <Contact />
       </section>
       <a href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-center justify-center">
-            <img
-              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
-              src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/sites/160477/images/F69olKlTDWfJQcAnS4jw_file.jpg"
-              alt=""
+        <div className="fixed bottom-6 right-6 z-50 bg-[#F7AB0A] hover:bg-[#f5b634] text-black p-2 rounded-full shadow-lg transition duration-300 ease-in-out">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-4 h-4"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
             />
-          </div>
-        </footer>
+          </svg>
+        </div>
       </a>
     </div>
   );
