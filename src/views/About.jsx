@@ -8,7 +8,7 @@ const About = () => {
       transition={{ duration: 1.2 }}
       className="relative flex flex-col min-h-screen max-w-7xl px-5 sm:px-10 mx-auto items-center justify-center text-center md:flex-row md:text-left md:justify-evenly gap-10"
     >
-      <h3 className="absolute top-10 sm:top-16 uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 text-xl sm:text-2xl">
+      <h3 className="absolute top-20 uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 text-xl sm:text-2xl">
         About
       </h3>
 
