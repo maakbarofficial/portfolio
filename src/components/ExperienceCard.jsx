@@ -28,11 +28,11 @@ const ExperienceCard = ({
         <p className="font-bold text-base sm:text-lg mt-1 text-center md:text-left">
           {company}
         </p>
-        <div className="flex justify-center md:justify-start space-x-2 my-3">
+        <div className="flex flex-wrap gap-2 sm:gap-1 justify-center md:justify-start space-x-2 my-3">
           {techStack?.map((stack, i) => (
             <img
               key={i}
-              className="h-8 w-8 sm:h-9 sm:w-9 rounded-full object-contain"
+              className="h-7 w-7 sm:h-9 sm:w-9 object-contain"
               src={stack}
               alt="TechStack"
             />

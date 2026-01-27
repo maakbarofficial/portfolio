@@ -1,4 +1,6 @@
 import { motion } from "motion/react";
+import AboutImg from "../assets/about.jpeg"
+import { personalInformationData } from "../data";
 
 const About = () => {
   return (
@@ -17,16 +19,15 @@ const About = () => {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="mt-20 sm:mt-24 md:mt-0 shrink-0 w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 xl:w-[380px] xl:h-[380px] rounded-full md:rounded-lg object-cover"
-        src="https://avatars.githubusercontent.com/u/106576398?v=4"
+        className="mt-20 sm:mt-24 md:mt-0 shrink-0 w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 xl:w-95 xl:h-95 rounded-full md:rounded-lg object-cover"
+        src={personalInformationData.aboutImage}
         alt="Muhammad Ali Akbar"
       />
 
       <div className="space-y-5 sm:space-y-8 px-0 md:px-10 max-w-xl">
         <h4 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
           Here is a{" "}
-          <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
-          background
+          <span className="underline decoration-[#F7AB0A]/50">background</span>{" "}
         </h4>
 
         <p className="text-base">

@@ -1,15 +1,11 @@
 import React from "react";
 import BackgroundCirlces from "../components/BackgroundCirlces";
-import HeroImg from "../assets/hero-img.jpg";
 import useTypewriter from "../hooks/useTypewriter";
+import { personalInformationData } from "../data";
 
 const Hero = () => {
   const text = useTypewriter({
-    words: [
-      "Hi, the name's Muhammad Ali Akbar",
-      "Guy-Who-Loves-☕️.jsx",
-      "Butt-Loves-To-Code-More.tsx",
-    ],
+    words: personalInformationData.typeWriterTexts,
     typingSpeed: 80,
     deletingSpeed: 50,
     delayBetweenWords: 2000,
@@ -22,13 +18,13 @@ const Hero = () => {
 
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src={HeroImg}
+        src={personalInformationData.heroImage}
         alt="Muhammad Ali Akbar"
       />
 
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 py-2 tracking-[15px]">
-          Software Engineer
+          {personalInformationData.title}
         </h2>
 
         <h1 className="text-3xl lg:text-4xl font-semibold px-10">

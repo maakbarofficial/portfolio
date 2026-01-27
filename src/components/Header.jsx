@@ -1,5 +1,6 @@
 import { SocialIcon } from "react-social-icons";
 import { motion } from "motion/react";
+import { personalInformationData } from "../data";
 
 const Header = () => {
   return (
@@ -22,25 +23,19 @@ const Header = () => {
       >
         <SocialIcon
           network="linkedin"
-          url="https://www.linkedin.com/in/maakbarofficial"
+          url={personalInformationData.linkedinURL}
           fgColor="gray"
           bgColor="transparent"
         />
         <SocialIcon
           network="github"
-          url="https://github.com/maakbarofficial"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          network="facebook"
-          url="https://facebook.com/maakbarofficial"
+          url={personalInformationData.githubURL}
           fgColor="gray"
           bgColor="transparent"
         />
         <SocialIcon
           network="whatsapp"
-          url="https://api.whatsapp.com/send?phone=923453117493"
+          url={personalInformationData.whatsappURL}
           fgColor="gray"
           bgColor="transparent"
         />
