@@ -23,11 +23,11 @@ const Hero = () => {
       />
 
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 py-2 tracking-[15px]">
+        <h2 className="text-sm uppercase text-white py-2 tracking-[15px]">
           {personalInformationData.title}
         </h2>
 
-        <h1 className="text-3xl lg:text-4xl font-semibold px-10">
+        <h1 className="text-xl lg:text-2xl font-semibold px-10">
           <span>{text}</span>
           <span className="animate-pulse text-yellow-400 ml-1">|</span>
         </h1>

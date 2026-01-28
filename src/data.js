@@ -27,9 +27,10 @@ export const personalInformationData = {
   githubURL: "https://github.com/maakbarofficial",
   whatsappURL: "https://api.whatsapp.com/send?phone=923453117493",
   typeWriterTexts: [
-    "Hi, the name's Muhammad Ali Akbar",
-    "Guy-Who-Loves-☕️.jsx",
-    "Butt-Loves-To-Code-More.tsx",
+    "<HelloWorld /> 👋 I'm Muhammad Ali Akbar",
+    "I turn ☕ into clean code",
+    "while (alive) { code(); }",
+    "Building Products, not just Projects",
   ],
   aboutImage: aboutImg,
 };
