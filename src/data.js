@@ -33,6 +33,7 @@ export const personalInformationData = {
     "Building Products, not just Projects",
   ],
   aboutImage: aboutImg,
+  aboutText: "Software Engineer with 4+ years of experience building robust, scalable, high-performance applications, delivering reliable client-side and server-side solutions. Passionate about turning business requirements into well-engineered solutions, with a strong focus on performance, reliability, and long-term maintainability."
 };
 
 export const experienceData = [

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import AboutImg from "../assets/about.jpeg"
+import AboutImg from "../assets/about.jpeg";
 import { personalInformationData } from "../data";
 
 const About = () => {
@@ -27,14 +27,11 @@ const About = () => {
       <div className="space-y-5 sm:space-y-8 px-0 md:px-10 max-w-xl">
         <h4 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
           Here is a{" "}
-          <span className="underline decoration-[#F7AB0A]/50">background</span>{" "}
+          <span className="underline decoration-[#F7AB0A]/50">{"</>"}</span>{" "}
+          background
         </h4>
 
-        <p className="text-base">
-          Experienced Software Engineer with expertise in building robust,
-          scalable client-side and server-side solutions, delivering
-          high-quality results in a dynamic software landscape.
-        </p>
+        <p className="text-base">{personalInformationData.aboutText}</p>
       </div>
     </motion.div>
   );
