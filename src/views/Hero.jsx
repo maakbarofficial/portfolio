@@ -36,19 +36,19 @@ const Hero = ({ activeTab, setActiveTab }) => {
         <Header />
 
         <div className="pt-4 flex flex-wrap justify-center gap-2">
-          {["experience", "projects", "skills", "about", "contact"].map(
-            (tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-6 py-2 border border-yellow-500 rounded-full font-normal uppercase text-xs tracking-widest transition-all hover:bg-yellow-500 hover:text-black cursor-pointer focus:border-none ${
-                  activeTab === tab ? "bg-yellow-500 text-black font-semibold" : ""
-                }`}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            )
-          )}
+          {["experience", "projects", "skills", "contact"].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-6 py-2 border border-yellow-500 rounded-full font-normal uppercase text-xs tracking-widest transition-all hover:bg-yellow-500 hover:text-black cursor-pointer focus:border-none ${
+                activeTab === tab
+                  ? "bg-yellow-500 text-black font-semibold"
+                  : ""
+              }`}
+            >
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            </button>
+          ))}
         </div>
       </div>
     </div>

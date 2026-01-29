@@ -7,7 +7,7 @@ import Projects from "./views/Projects";
 import Contact from "./views/Contact";
 
 function App() {
-  const [activeTab, setActiveTab] = useState("experience");
+  const [activeTab, setActiveTab] = useState("about");
 
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
@@ -68,9 +68,8 @@ function App() {
   };
 
   return (
-    <div className="bg-[rgb(36,36,36)] text-white min-h-screen overflow-x-hidden">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scroll-smooth">
       <Hero activeTab={activeTab} setActiveTab={handleTabClick} />
-
       <div className="min-h-screen px-4 sm:px-10">{renderTab()}</div>
     </div>
   );
