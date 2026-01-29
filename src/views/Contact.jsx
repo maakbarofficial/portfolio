@@ -34,15 +34,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-6 md:px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-15 md:top-20 uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 text-xl sm:text-2xl">
+    <div className="h-screen flex flex-col text-center md:text-left max-w-7xl justify-evenly mx-auto items-center">
+      <h3 className="uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 text-xl sm:text-2xl text-center">
         Contact Me
       </h3>
 
       <div className="flex flex-col space-y-5">
         <h4 className="text-xl md:text-4xl font-semibold text-center">
           I have got just what you need.{" "}
-          <span className="underline decoration-[#F7AB0A]/50">Lets Talk.</span>
+          <span className="underline decoration-yellow-500">Lets Talk.</span>
         </h4>
         <div className="space-y-1 md:space-y-4">
           <div className="flex items-center space-x-5 justify-center">
