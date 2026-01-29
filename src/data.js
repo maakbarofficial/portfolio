@@ -120,7 +120,7 @@ export const experienceData = [
   },
   {
     id: 4,
-    position: "Software Developer",
+    position: "Software Developer - Internship",
     company: "DTecherz",
     companyImg:
       "https://www.dtecherz.com/_next/image?url=%2Flogos%2Flogo-white.webp&w=640&q=75",

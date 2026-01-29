@@ -8,25 +8,28 @@ const Experience = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.2 }}
-      className="relative min-h-screen max-w-full mx-auto px-5 sm:px-10 flex flex-col items-center justify-center"
+      className="relative min-h-screen max-w-6xl mx-auto px-5 sm:px-10 py-20 flex flex-col"
     >
-      <h3 className="uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 text-xl sm:text-2xl md:mb-10">
+      <h3 className="uppercase tracking-[12px] sm:tracking-[20px] text-gray-500 text-xl sm:text-2xl text-center mb-16">
         Experience
       </h3>
 
-      <div className="w-full flex space-x-5 overflow-x-scroll snap-x snap-mandatory pb-10 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {experienceData.map((exp) => (
-          <ExperienceCard
-            key={exp.id}
-            position={exp.position}
-            company={exp.company}
-            companyImg={exp.companyImg}
-            type={exp.type}
-            period={exp.period}
-            techStack={exp.techStack}
-            points={exp.points}
-          />
-        ))}
+      <div className="relative before:absolute before:top-0 before:bottom-0 before:left-1/2 before:w-1 before:-translate-x-1/2 before:bg-gray-700">
+        {experienceData.map((exp, idx) => {
+          const isLatest = idx === 0;
+          return (
+            <div
+              key={exp.id}
+              className={`relative mb-20 flex flex-col md:flex-row items-center ${
+                idx % 2 === 0 ? "md:flex-row-reverse" : ""
+              }`}
+            >
+              <div className="w-full md:px-8 mt-10 md:mt-0">
+                <ExperienceCard {...exp} />
+              </div>
+            </div>
+          );
+        })}
       </div>
     </motion.div>
   );
