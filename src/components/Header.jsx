@@ -4,7 +4,7 @@ import { personalInformationData } from "../data";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+    <header className="flex items-start justify-center max-w-7xl mx-auto mt-2">
       <motion.div
         initial={{
           x: -500,
@@ -24,19 +24,11 @@ const Header = () => {
         <SocialIcon
           network="linkedin"
           url={personalInformationData.linkedinURL}
-          fgColor="gray"
           bgColor="transparent"
         />
         <SocialIcon
           network="github"
           url={personalInformationData.githubURL}
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          network="whatsapp"
-          url={personalInformationData.whatsappURL}
-          fgColor="gray"
           bgColor="transparent"
         />
       </motion.div>
@@ -57,15 +49,16 @@ const Header = () => {
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
         <SocialIcon
+          network="whatsapp"
+          url={personalInformationData.whatsappURL}
+          bgColor="transparent"
+        />
+        <SocialIcon
           url="#contact"
           className="cursor-pointer h-5 w-5"
           network="email"
-          fgColor="gray"
           bgColor="transparent"
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400 mx-1">
-          Get In Touch
-        </p>
       </motion.div>
     </header>
   );

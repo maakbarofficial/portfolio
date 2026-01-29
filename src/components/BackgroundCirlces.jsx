@@ -19,7 +19,7 @@ const BackgroundCirlces = () => {
       <div className="absolute border border-[#333333] rounded-full h-50 w-50 mt-60 animate-ping" />
       <div className="absolute border border-[#333333] rounded-full h-75 w-75 mt-60" />
       <div className="absolute border border-[#333333] rounded-full h-125 w-125 mt-60" />
-      <div className="rounded-full border border-[#F7AB0A] opacity-20 h-162.5 w-162.5 mt-60 absolute animate-pulse" />
+      <div className="rounded-full border border-yellow-500 opacity-30 h-162.5 w-162.5 mt-60 absolute animate-pulse" />
       <div className="absolute border border-[#333333] rounded-full h-200 w-200 mt-60" />
     </motion.div>
   );
