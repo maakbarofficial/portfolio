@@ -1,62 +1,76 @@
 import { motion } from "motion/react";
+import { useState } from "react";
 import { skillsData } from "../data";
 
-const Skill = ({ skillpicture, skill, directionLeft, lightBg }) => {
-  return (
-    <div
-      className={`group relative flex cursor-pointer w-20 h-20 sm:w-24 sm:h-24 xl:w-32 xl:h-32 rounded-full p-3 sm:p-4 xl:p-5 border border-gray-500 mx-auto ${
-        lightBg ? "bg-white" : ""
-      }`}
-    >
-      <motion.img
-        initial={{
-          x: directionLeft ? 40 : -40,
-          opacity: 0,
-        }}
-        transition={{ duration: 0.8 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        src={skillpicture}
-        className="object-contain w-full h-full transition duration-300 ease-in-out"
-      />
-      <div className="absolute hidden sm:flex opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out bg-white inset-0 rounded-full z-0">
-        <div className="flex items-center justify-center h-full text-center mx-auto">
-          <p className="text-sm sm:text-lg xl:text-2xl font-bold text-black">
-            {skill}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const Skills = () => {
+  const [activeSkill, setActiveSkill] = useState(null);
+
   return (
-    <motion.div
+    <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.2 }}
-      className="min-h-screen text-center px-4 sm:px-8 lg:px-10 py-12 mx-auto"
+      transition={{ duration: 1 }}
+      className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 lg:px-12 py-20"
     >
-      <h3 className="uppercase tracking-[10px] sm:tracking-[20px] text-gray-500 text-xl sm:text-2xl">
-        Skills
-      </h3>
-
-      <h3 className="uppercase tracking-[2px] sm:tracking-[3px] text-gray-500 text-xs sm:text-sm">
-        These are the Techs I've worked with
-      </h3>
-
-      <div className="grid grid-cols-4 md:grid-cols-6 gap-4 sm:gap-5 mx-auto mt-10">
-        {skillsData.map((skill, index) => (
-          <Skill
-            key={skill.id}
-            skillpicture={skill.img}
-            skill={skill.name}
-            directionLeft={index % 2 === 0}
-            lightBg={skill.lightBg}
-          />
-        ))}
+      <div className="mb-14 text-center">
+        <h3 className="uppercase tracking-[12px] sm:tracking-[20px] text-gray-400 text-xl">
+          Skills
+        </h3>
+        <p className="mt-3 text-sm text-gray-500">
+          Technologies I’ve worked with & love building in
+        </p>
       </div>
-    </motion.div>
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 sm:gap-10 max-w-6xl">
+        {skillsData.map((skill, index) => {
+          const isActive = activeSkill === skill.id;
+
+          return (
+            <motion.div
+              key={skill.id}
+              onClick={() => setActiveSkill(isActive ? null : skill.id)}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              whileHover={{ scale: 1.08 }}
+              className="group relative flex flex-col items-center justify-center cursor-pointer"
+            >
+              <div
+                className={`absolute -inset-1 rounded-full bg-gradient-to-tr from-emerald-500/30 via-sky-500/30 to-purple-500/30 blur-lg transition duration-500
+                ${
+                  isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                }`}
+              />
+              <div
+                className={`relative w-20 h-20 sm:w-24 sm:h-24 xl:w-28 xl:h-28 rounded-full p-4 border border-white/10 backdrop-blur-md shadow-lg ${
+                  skill.lightBg ? "bg-white/80" : "bg-gray-900/60"
+                }`}
+              >
+                <motion.img
+                  initial={{ x: index % 2 === 0 ? 40 : -40, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.7 }}
+                  src={skill.img}
+                  alt={skill.name}
+                  className="w-full h-full object-contain"
+                />
+                <div
+                  className={`absolute inset-0 flex items-center justify-center rounded-full bg-black/70 transition duration-300
+                  ${
+                    isActive
+                      ? "opacity-100"
+                      : "opacity-0 group-hover:opacity-100"
+                  }`}
+                >
+                  <p className="text-sm xl:text-base font-semibold text-white tracking-wide">
+                    {skill.name}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </motion.section>
   );
 };
 
