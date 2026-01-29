@@ -3,71 +3,83 @@ import { projectsData } from "../data";
 
 const Projects = () => {
   return (
-    <motion.div
+    <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      className="relative min-h-screen px-4 sm:px-6 md:px-10 py-16 mx-auto text-center"
+      transition={{ duration: 1 }}
+      className="relative min-h-screen px-4 sm:px-8 lg:px-12 py-20 text-center"
     >
-      <h3 className="uppercase tracking-[10px] sm:tracking-[15px] md:tracking-[20px] text-gray-500 text-lg sm:text-xl md:text-2xl">
-        Projects
-      </h3>
-      <div className="relative w-full mt-10 flex overflow-x-scroll snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="mb-16">
+        <h3 className="uppercase tracking-[12px] sm:tracking-[18px] text-gray-400 text-xl sm:text-2xl">
+          Projects
+        </h3>
+        <p className="mt-3 text-sm text-gray-500">
+          Selected work showcasing my experience & creativity
+        </p>
+      </div>
+
+      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
         {projectsData.map((project, index) => (
-          <div
+          <motion.div
             key={project.id}
-            className="w-full sm:w-screen shrink-0 snap-center flex flex-col items-center justify-center gap-6 px-4 sm:px-10 md:px-24 py-10 min-h-[80vh]"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            whileHover={{ y: -8 }}
+            className="rounded-xl bg-[#292929] p-6 sm:p-8 md:p-10 shadow-lg hover:shadow-2xl hover:translate-y-3 transition-all duration-300 w-full cursor-context-menu"
           >
-            <motion.img
-              initial={{ y: -60, opacity: 0 }}
-              transition={{ duration: 1 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              src={project.image}
-              alt={project.title}
-              className="w-40 md:w-80 object-contain"
-            />
-            <div className="space-y-4 sm:space-y-6 max-w-4xl">
-              <h4 className="text-xl sm:text-2xl md:text-4xl font-semibold">
-                <span className="underline decoration-[#F7AB0A]/50">
-                  {index + 1} of {projectsData.length}
-                </span>{" "}
+            <div className="relative p-6">
+              <motion.img
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                src={project.image}
+                alt={project.title}
+                className="w-full h-40 sm:h-44 object-contain mx-auto"
+              />
+            </div>
+            <div className="relative px-6 pb-8 space-y-4">
+              <h4 className="text-lg sm:text-xl font-semibold">
                 {project.title}
               </h4>
-              <div className="flex flex-wrap items-center justify-center gap-2">
-                <span className="text-xs sm:text-sm md:text-base text-gray-300">
-                  Techs used:
-                </span>
+
+              <div className="flex flex-wrap justify-center gap-2">
                 {project.techs.map((tech, i) => (
-                  <img
+                  <div
                     key={i}
-                    src={tech}
-                    alt="Tech"
-                    className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 object-contain"
-                  />
+                    className="p-2 rounded-full bg-black/40 border border-white/10"
+                  >
+                    <img
+                      src={tech}
+                      alt="Tech"
+                      className="h-5 w-5 object-contain"
+                    />
+                  </div>
                 ))}
               </div>
-              <p className="text-sm sm:text-base md:text-lg text-center leading-relaxed">
+
+              <p className="text-sm text-gray-300 leading-relaxed">
                 {project.description}
               </p>
+
               {project.link && (
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2"
+                  className="inline-flex items-center gap-2 text-[#F7AB0A] hover:underline underline-offset-4 transition"
                 >
-                  Visit Link{" "}
+                  View Project
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="lucide lucide-link-icon lucide-link"
                   >
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
@@ -75,12 +87,10 @@ const Projects = () => {
                 </a>
               )}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-
-      <div className="w-full absolute left-0 top-[20%] sm:top-[18%] md:top-[15%] h-55 sm:h-80 md:h-125 bg-[#F7AB0A]/10 -skew-y-12 pointer-events-none" />
-    </motion.div>
+    </motion.section>
   );
 };
 
